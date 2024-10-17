@@ -10,10 +10,8 @@ const books: Book[] = bookStore.getAllBooks();
 const CardStore = useCardStore();
 
 
-function handleSubmit(values: any, { setErrors }: any) {
-  //
-  const { } = values
-  
+function handleSubmit(data: any) {
+  CardStore.addCarrito(data)
 }
 
 
@@ -37,7 +35,7 @@ function handleSubmit(values: any, { setErrors }: any) {
                 <div class="price">$ {{ book.price }}.00</div>
                 <div class="overlay">
                     <!-- al hacer click en comprar el libro debera agregarse al carro -->
-                    <button class="btn-buy">Comprar</button>
+                    <button class="btn-buy" @click="handleSubmit">Comprar</button>
                 </div>
             </div>
         </div>

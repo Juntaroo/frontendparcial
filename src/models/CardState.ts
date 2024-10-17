@@ -1,7 +1,7 @@
-import type { Book } from "./BookModel";
+import type { Card } from "./CardModel";
 
 
 export interface CardState {
     loading: boolean,
-    data: Book[]
+    data: Card[]
 }

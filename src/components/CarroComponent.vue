@@ -2,8 +2,12 @@
 import { useBookStore } from '@/stores/BookStore';
 import type { Book } from '@/models/BookModel'
 
+
 const bookStore = useBookStore();
 const books: Book[] = bookStore.getAllBooks();
+
+
+
 </script>
 
 <template>
@@ -20,7 +24,7 @@ const books: Book[] = bookStore.getAllBooks();
                 <div class="price">$ {{ book.price }}.00</div>
                 <div class="overlay">
                     <!-- Aca se eliminará el carrito -->
-                    <button class="btn-buy">Eliminar</button>
+                    <button class="btn-delete">Eliminar</button>
                 </div>
             </div>
         </div>
